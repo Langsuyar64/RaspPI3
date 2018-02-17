@@ -152,9 +152,9 @@ if command -v apt-get &> /dev/null; then
   # If not,
   else
     # fall back on the php5 packages
-    phpVer="php5"
+    phpVer="php"
   fi
-  # We also need the correct version for `php-sqlite` (which differs across distros)
+  # We also need the correct version for `-sqlite` (which differs across distros)
   if ${PKG_MANAGER} install --dry-run ${phpVer}-sqlite3 > /dev/null 2>&1; then
     phpSqlite="sqlite3"
   else
